@@ -1,19 +1,26 @@
 import React from 'react';
 import styled,{ css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import {FaFigma, DiSwift} from 'react-icons/fa';
-
+// import {FaFigma, DiSwift} from 'react-icons/fa';
+import design from '../images/design.svg'
+import figma from '../images/figma.svg'
+import swift from '../images/swift.svg'
+import tutorials from '../images/tutorials.svg'
+import downloads from '../images/downloads.svg'
+import courses from '../images/course.svg'
+import user from '../images/user.svg'
+import book from '../images/book.svg'
 
 const Sidebar = () => {
   return (
     <Nav> 
       <Rect>
           <Link>
-            <Icon circle>UI</Icon>
+            <Icon circle><Img src={book}/></Icon>
           </Link> 
     
           <Link>
-            <Icon circle>UI</Icon>
+            <Icon circle><Img src={user}/></Icon>
          </Link> 
       </Rect>
       <Card>
@@ -64,7 +71,7 @@ const Sidebar = () => {
 const Nav = styled.nav`
   display:flex;
   flex-direction:column;
-  justify-contents:flex-start;
+  justify-content: flex-start;
   align-items:flex-start;
   width:320px;
   background:#E3E8FF;
@@ -131,7 +138,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 font-size:8px;
-//filter:drop-shadow(0px 5px 10px);
+/* //filter:drop-shadow(0px 5px 10px); */
 
   ${props=>props.circle && css`
     height:44px;
@@ -197,22 +204,25 @@ a{
 const navlist=[
   {header:'Courses',
     tiles:[
-      {name:'UI Design for iOS 14',icon:'',color:'pink2',path:''},
-      {name:'SwiftUI for iOS 14',icon:'',color:'blue2',path:''},
-      {name:'UI design for developers',icon:'',color:'cyan',path:''},
+      {name:'UI Design for iOS 14',icon:'',color:'pink2',path:'', image: design},
+      {name:'SwiftUI for iOS 14',icon:'',color:'blue2',path:'', image: swift},
+      {name:'UI design for developers',icon:'',color:'cyan',path:'', image: design},
     ],
     color:'pink1',
+    image: courses
   },
   {header:'Tutorials',
     tiles:[
-      {name:'UI design',icon:'',color:'orange',path:''},
-      {name:'SwiftUI',icon:'',color:'blue3',path:''},
-      {name:'Figma',icon:'',color:'black',path:''},
+      {name:'UI design',icon:'',color:'orange',path:'', image: design},
+      {name:'SwiftUI',icon:'',color:'blue3',path:'',image: swift},
+      {name:'Figma',icon:'',color:'black',path:'', image: figma},
     ],
     color:'blue1',
+    image: tutorials
   },
   {header:'Downloads',
   color:'purple',
+  image: downloads
   },
 ]
 const renderHeaders = () =>{
@@ -220,7 +230,7 @@ const renderHeaders = () =>{
       return(
         <Tile key={`${item.header}`}>
           <Link className='tile'>
-            <Icon color={item.color}>UI</Icon>
+            <Icon color={item.color}><Img src={item.image}/></Icon>
             {item.header}
           </Link>
         </Tile>
@@ -229,17 +239,23 @@ const renderHeaders = () =>{
 }
 
 const renderSection = (section) =>{
-  const list = navlist.filter(item=>item.header===section)[0];
+  const list = navlist.filter(item=>item.header === section)[0];
   return list['tiles'].map((item,index)=>{
     return (
       <Tile key={`${section}Tile${index}`}>
         <Link className='tile'>
-          <Icon color={item.color}>UI</Icon>
+          <Icon color={item.color}><Img src={item.image}/></Icon>
           {item.name}
         </Link>
       </Tile>
     )})
 }
 
+
+const Img = styled.img`
+height: 18px;
+width: 22px;
+
+`
 
 export default Sidebar
