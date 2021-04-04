@@ -45,7 +45,7 @@ grid-auto-rows: minmax(300px,auto);
 const Hamburger = styled.div`
 position: absolute;
 top: 20px;
-right: 32px;
+right: 16px;
 width: 30px;
 height: 20px;
 display: none;

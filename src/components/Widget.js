@@ -78,6 +78,10 @@ position: relative;
 border-radius: 8px;
 padding: 1px;
 background: #D3D9F3;
+@media only screen and (max-width: 800px){
+    width: 300px;
+
+}
 `
 const Progress = styled.span`
 height: 3px;
