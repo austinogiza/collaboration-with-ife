@@ -79,6 +79,7 @@ grid-gap: 20px;
 grid-template-columns: repeat(2,1fr);
 cursor: pointer;
 transition: 0.3s ease-in-out;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 20px 40px rgba(73, 30, 184, 0.3);
 
 `
 

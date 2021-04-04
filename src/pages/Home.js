@@ -43,13 +43,14 @@ grid-auto-rows: minmax(300px,auto);
 `
 
 const Hamburger = styled.div`
-position: fixed;
+position: absolute;
 top: 20px;
 right: 32px;
 width: 30px;
 height: 20px;
 display: none;
 cursor: pointer;
+z-index: 1000;
 @media only screen and (max-width: 800px){
   display: block;
 }
