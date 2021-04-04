@@ -10,10 +10,11 @@ import downloads from '../images/downloads.svg'
 import courses from '../images/course.svg'
 import user from '../images/user.svg'
 import book from '../images/book.svg'
+import {motion} from 'framer-motion'
 
-const Sidebar = () => {
+const Sidebar = ({toggle}) => {
   return (
-    <Nav> 
+    <Nav toggle={toggle}> 
       <Rect>
           <Link>
             <Icon circle><Img src={book}/></Icon>
@@ -24,24 +25,6 @@ const Sidebar = () => {
          </Link> 
       </Rect>
       <Card>
-        {/* <Tile>
-          <Link className='tile'>
-            <Icon pink1>UI</Icon>
-            Courses
-          </Link>
-        </Tile>
-        <Tile>
-          <Link className='tile'>
-            <Icon blue1>UI</Icon>
-            Tutorials
-          </Link>
-        </Tile>
-        <Tile>
-          <Link className='tile'>
-            <Icon purple>UI</Icon>
-            Downloads
-          </Link>
-        </Tile> */}
         {renderHeaders()}
       </Card>
       <Card id='courses'>
@@ -57,28 +40,28 @@ const Sidebar = () => {
 }
 
 
-// const white1 = '#F2F6FF';
-// const white2 = '#E3E8FF';
-// const white3 = '#D3D9f3';
-// const blue = '#1A2151';
-// const purple1 = '#6234D5';
-// const purple2 = '#8449FC';
-// const cyan1 = '#00C6F2';
-// const cyan2 = '#00CFFD';
-// const pink1 = '#FF52A0';
-// const pink2 = '#FF6FB0';
-
-const Nav = styled.nav`
+const Nav = styled(motion.nav)`
   display:flex;
   flex-direction:column;
   justify-content: flex-start;
   align-items:flex-start;
   width:320px;
   background:#E3E8FF;
-  padding:5% 0;
+  padding: 5% 0;
+min-height: 500px;
+height: 100%;
+transition: 0.5s ease-in;
+@media only screen and (max-width: 800px){
+  position: fixed;
+  z-index: 999;
+  transition: 0.5s ease-in;
+  transform: ${props => props.toggle ? "translateX(0%)": "translateX(-200%)"};
+ 
+}
 `
 const Card = styled.ul`
   width:95%;
+  min-height: 150px;
   padding:2% 5%;
   display:flex;
   flex-direction:column;
@@ -100,7 +83,7 @@ display:flex;
 flex-direction:row;
 align-items:center;
 justify-content:flex-start; 
-
+transition: 0.3s ease-in;
 
   a{
     padding:8px;
@@ -116,10 +99,12 @@ justify-content:flex-start;
     flex-direction:row;
     align-items:center;
     justify-content:flex-start; 
+    transition: 0.3s ease-in;
   }
 
   a:hover{
     background:#00C6F2;
+    transition: 0.3s ease-in;
   }
 
   ${props => props.justify && css`
@@ -188,8 +173,9 @@ font-size:8px;
   
 `
 const Rect = styled.div`
-margin:auto;
-width:294px;
+margin:20px auto;
+max-width:300px;
+height: 50px;
 width:95%;
 padding:5%;
 display:flex;

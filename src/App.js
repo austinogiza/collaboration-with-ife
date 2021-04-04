@@ -3,6 +3,7 @@ import './App.css';
 import Layout from './container/Layout';
 import Home from './pages/Home';
 import ScrollTop from './components/ScrollTop';
+import { GlobalStyled } from './styles/GlobalStyles';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
 <Router>
 
 <Layout>
+<GlobalStyled/>
 <ScrollTop />
 <Switch>
 
