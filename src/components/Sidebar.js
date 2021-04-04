@@ -61,7 +61,7 @@ transition: 0.5s ease-in;
 `
 const Card = styled.ul`
   width:95%;
-  min-height: 150px;
+  min-height: 200px;
   padding:2% 5%;
   display:flex;
   flex-direction:column;
