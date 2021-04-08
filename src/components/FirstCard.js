@@ -9,9 +9,9 @@ const FirstCard = () => {
      <Body>
 
 <Top>
-<SingleCard color="linear-gradient(218.31deg, #007AFF 0%, #50A4FF 100%)" hang="linear-gradient(200.42deg, #FF8570 13.57%, #F9504A 98.35%);" header="UI Design for 
+<SingleCard shadow="0px 1px 3px rgba(0, 0, 0, 0.05), 0px 20px 40px rgba(0, 122, 255, 0.3)" color="linear-gradient(218.31deg, #007AFF 0%, #50A4FF 100%)" hang="linear-gradient(200.42deg, #FF8570 13.57%, #F9504A 98.35%);" header="UI Design for 
 iOS 14" icon="https://res.cloudinary.com/austinogiza/image/upload/v1617539465/ios_ghqqoj.svg" details="20 videos - 3 hours" image="https://res.cloudinary.com/austinogiza/image/upload/v1617537233/Illustration_1_kkgho0.svg"/>
-<SingleCard hang="linear-gradient(180deg, #2FB8FF 0%, #9EECD9 100%)" icon="https://res.cloudinary.com/austinogiza/image/upload/v1617539465/swift_mw07jg.svg" color="linear-gradient(200.44deg, #4316DB 13.57%, #9076E7 98.38%)" header="UI Design for Android" details="20 videos - 3 hours" image="https://res.cloudinary.com/austinogiza/image/upload/v1617537233/Illustration_2_g2wujl.svg"/>
+<SingleCard shadow="0px 1px 3px rgba(0, 0, 0, 0.05), 0px 20px 40px rgba(73, 30, 184, 0.3)" hang="linear-gradient(180deg, #2FB8FF 0%, #9EECD9 100%)" icon="https://res.cloudinary.com/austinogiza/image/upload/v1617539465/swift_mw07jg.svg" color="linear-gradient(200.44deg, #4316DB 13.57%, #9076E7 98.38%)" header="UI Design for Android" details="20 videos - 3 hours" image="https://res.cloudinary.com/austinogiza/image/upload/v1617537233/Illustration_2_g2wujl.svg"/>
 
 </Top>
 <Bottom>
@@ -79,7 +79,7 @@ grid-gap: 20px;
 grid-template-columns: repeat(2,1fr);
 cursor: pointer;
 transition: 0.3s ease-in-out;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 20px 40px rgba(73, 30, 184, 0.3);
+
 
 `
 

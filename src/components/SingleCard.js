@@ -2,16 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import { SmallHeader,SmallText} from '../styles/TextStyles'
 
-const SingleCard = ({header, details, image,color, hang, icon}) => {
+const SingleCard = ({header, details, image,shadow,color, hang, icon}) => {
     return (
-     <Body color={color}>
+     <Body shadow={shadow} color={color}>
 
      <Hang hang={hang}>
          <Handicon src={icon}/>
      </Hang>
      <Image src={image}/>
      <Header>{header}</Header>
-<Details>{details}</Details>
+<Details >{details}</Details>
 </Body>
     )
 }
@@ -28,7 +28,7 @@ background: ${props => props.color};
 display: flex;
 flex-direction: column;
 padding: 20px;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05), 0px 20px 40px rgba(73, 30, 184, 0.3);
+box-shadow: ${props=> props.shadow};
 `
 
 const Image = styled.img`
