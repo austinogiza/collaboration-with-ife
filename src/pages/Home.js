@@ -68,7 +68,7 @@ width: 100%;
 height: 3px;
 border-radius: 20px;
 background: #000;
-transition: 0.5s ease-in;
+transition: 0.2s ease-in;
 transform: ${props => props.togg ? "rotate(-45deg) translate(-2px,1px);": "rotate(0deg)"};
 `
 const Bottom = styled(motion.span)`
@@ -77,7 +77,7 @@ height: 3px;
 border-radius: 20px;
 margin-top: 4px;
 background: #000;
-transition: 0.5s ease-in;
+transition: 0.2s ease-in;
 transform: ${props => props.togg ? "rotate(45deg) translate(-5px,-6px);": "rotate(0deg)"};
 
 `

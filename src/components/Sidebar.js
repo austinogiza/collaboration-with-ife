@@ -50,11 +50,11 @@ const Nav = styled(motion.nav)`
   padding: 5% 0;
 min-height: 500px;
 height: 100%;
-transition: 0.5s ease-in;
+transition: 0.2s ease-in;
 @media only screen and (max-width: 800px){
   position: fixed;
   z-index: 999;
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
   transform: ${props => props.toggle ? "translateX(0%)": "translateX(-200%)"};
  
 }
